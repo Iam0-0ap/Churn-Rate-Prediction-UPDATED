@@ -1,1 +1,2 @@
-"# django-authentication-system with churn rate prediction" 
+# Churn Rate Predictor
+This project is a Machine Learning-based application that predicts the churn rate of telecom customers. The model is trained on a dataset of customer information, including demographics, usage behavior, and other factors that may influence their decision to switch to another provider. Using this information, the model predicts the likelihood of a customer churning and provides insights into the factors that contribute to customer churn. The application is designed to help telecom companies reduce customer churn and increase customer retention by identifying and addressing the root causes of churn.
