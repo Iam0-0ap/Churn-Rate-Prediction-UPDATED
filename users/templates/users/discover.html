@@ -1,0 +1,75 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <br>
+    <h1> HOW PREDICTION WORKS?</h1>
+    <p style="font-size: large;">The Prediction is done on the basis of data provided by the company in the trial period of 1 month. <br>
+        The dataset is refreshed everytime the company decides to predict the churn of its customers on the respective period of time. </p>
+    <br><br>
+    <h1> DATA VISUALIZATION</h1>
+    <h2 style="text-align: center;"> Analysis of Dataset</h2>
+
+<!-- Photo Grid -->
+    <div class="row"> 
+      <img src="{% static 'users/pimages/Categorical_first_part1.svg' %}" style="width: 100%;" >
+      <img src="{% static 'users/pimages/Categorical_second_part1.svg' %}" style="width: 100%;" >
+      <img src="{% static 'users/pimages/Categorical_third_part1.svg' %}" style="width: 100%;" >
+      <img src="{% static 'users/pimages/Categorical_fourth_part1.svg' %}" style="width: 100%;" >
+    </div>
+
+    <div class="row">
+        <h2 style="text-align: center;">Checking for outliers in continuous variables</h2>
+        <img src="{% static 'users/pimages/Continuous_variables.svg' %}" style="width: 100%;" >
+        
+    
+    </div>
+    <br><br><br>
+    <div class="row">
+        
+        <h2 style="text-align: center;">Comparison of Other Attributes VS CHURN</h2>
+        <img src="{% static 'users/pimages/tenure_vs_Churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/MonthlyCharges_vs_Churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/TotalCharges_vs_Churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/Age_vs_Churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/Number of Referrals_vs_Churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/Avg Monthly Long Distance Charges_vs_Churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/Avg Monthly GB Download_vs_Churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/Total Refunds_vs_Churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/Total Extra Data Charges_vs_Churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/Total Long Distance Charges_vs_Churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/Total Revenue_vs_Churn.svg' %}" style="width: 100%;" >
+
+        <!-- <img src="{% static 'users/pimages/gender_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/SeniorCitizen_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/Partner_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/Dependents_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/PhoneService_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/MultipleLines_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/InternetService_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/OnlineSecurity_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/OnlineBackup_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/DeviceProtection_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/TechSupport_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/StreamingTV_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/StreamingMovies_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/Contract_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/PaperlessBilling_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/PaymentMethod_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/Under 30_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/Married_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/Referred a Friend_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/Streaming Music_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/Premium Tech Support_vs_churn.svg' %}" style="width: 100%;" >
+        <img src="{% static 'users/pimages/Unlimited Data_vs_churn.svg' %}" style="width: 100%;" >
+    </div> -->
+
+    <div class="row">
+        <img src="{% static 'users/pimages/Churn_rate.svg' %}" style="height: auto; width: 50%; margin-left: auto; margin-right: auto; display: block;" >
+        
+    </div>
+    
+
+</div>
+{% endblock content %} 

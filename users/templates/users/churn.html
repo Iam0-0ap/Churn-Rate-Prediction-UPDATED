@@ -1,0 +1,169 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <div class="container">
+                  <h2 id="header-h1"><b>CHURN RATE PREDICTOR </b></h2>
+                  <form action = "{% url 'result'  %} " method="POST">
+                    {% csrf_token %}
+                    <div class = "form-group">
+                        <input type = "text" required placeholder = "CustomerID" name = "CustomerID" style = "width: 250px;">
+                    </div>
+                        <br>
+                    <div class = "form-group">
+                        <select class = "form-control" required name = "Dependents" style="width:250px;">
+                            <option value = "" selected> Has dependents? </option>
+                            <option> Yes </option>
+                            <option> No </option>
+                        </select>
+                    </div>
+                    <br> 
+                    <div class = "form-group">
+                        <input type = "number" required placeholder = "tenure" name = "tenure" style = "width: 250px;">
+                    </div>
+                    <br> 
+                    <div class = "form-group">
+                        <select class = "form-control" required name = "PhoneService" style="width:250px;">
+                            <option value = "" selected> Has phone service? </option>
+                            <option> Yes </option>
+                            <option> No </option>
+                        </select>
+                    </div>
+                    <br> 
+                    <div class = "form-group">
+                        <select class = "form-control" required name = "MultipleLines" style="width:250px;">
+                            <option value = "" selected> Multiple Lines? </option>
+                            <option> Yes </option>
+                            <option> No </option>
+                        </select>
+                    </div>
+                    <br> 
+                    <div class = "form-group">
+                        <select class = "form-control" required name = "InternetService" style="width:250px;">
+                            <option value = "" selected> Internet Service Type </option>
+                            <option> Fiber optic </option>
+                            <option> No</option>
+                            <option> DSL </option>
+                        </select>
+                    </div>
+                    <br> 
+                    <div class = "form-group">
+                        <select class = "form-control" required name = "OnlineSecurity" style="width:250px;">
+                            <option value = "" selected> Has online security? </option>
+                            <option> Yes </option>
+                            <option> No </option>
+                        </select>
+                    </div>
+                    <br> 
+                    <div class = "form-group">
+                        <select class = "form-control" required name = "StreamingServices" style="width:250px;">
+                            <option value = "" selected> Streaming services? </option>
+                            <option> Yes </option>
+                            <option> No </option>
+                        </select>
+                    </div>
+                    <br> 
+                    <div class = "form-group">
+                        <select class = "form-control" required name = "OnlineBackup" style="width:250px;">
+                            <option value = "" selected> Has online backup? </option>
+                            <option> Yes </option>
+                            <option> No </option>
+                        </select>
+                    </div>
+                    <br> 
+                    <div class = "form-group">
+                        <select class = "form-control" required name = "DeviceProtection" style="width:250px;">
+                            <option value = "" selected> Has device protection? </option>
+                            <option> Yes </option>
+                            <option> No </option>
+                        </select>
+                    </div>
+                    <br> 
+                    <div class = "form-group">
+                        <select class = "form-control" required name = "TechSupport" style="width:250px;">
+                            <option value = "" selected> Has tech support? </option>
+                            <option> Yes </option>
+                            <option> No </option>
+                        </select>
+                    </div>
+                    <br> 
+                    <div class = "form-group">
+                        <select class = "form-control" required name = "Contract" style="width:250px;">
+                            <option value = "" selected> Contract type </option>
+                            <option> Month-to-month </option>
+                            <option> One year </option>
+                            <option> Two year </option>
+                        </select>
+                    </div>
+                    <br> 
+                    <div class = "form-group">
+                        <select class = "form-control" required name = "PaperlessBilling" style="width:250px;">
+                            <option value = "" selected> Paperless Billing? </option>
+                            <option> Yes </option>
+                            <option> No </option>
+                        </select>
+                    </div>
+                    <br> 
+                    <div class = "form-group">
+                        <select class = "form-control" required name = "PaymentMethod" style="width:250px;">
+                            <option value = "" selected> Payment Method type </option>
+                            <option> eSewa </option>
+                            <option> Cash </option>
+                            <option> Mobile Banking </option>
+                            <option> Credit card (automatic) </option>
+                        </select>
+                    </div>
+                    <br> 
+                    <div class = "form-group">
+                        <input type = "number" required placeholder = "MonthlyCharges" name = "MonthlyCharges" style = "width: 250px;">
+                    </div>
+                    <br> 
+                    <div class = "form-group">
+                        <input type = "number" required placeholder = "Age" name = "Age" style = "width: 250px;">
+                    </div>
+                    <br> 
+                    <div class = "form-group">
+                        <select class = "form-control" required name = "Married" style="width:250px;">
+                            <option value = "" selected> Are you Married? </option>
+                            <option> Yes </option>
+                            <option> No </option>
+                        </select>
+                    </div>
+                    <br> 
+                    <div class = "form-group">
+                        <input type = "number" required placeholder = "Number of Referrals" name = "Number of Referrals" style = "width: 250px;">
+                    </div>
+                    <br> 
+                    <div class = "form-group">
+                         <div class = "form-group">
+                            <input type = "number" required placeholder = "Avg Monthly GB Download" name = "Avg Monthly GB Download" style = "width: 250px;">
+                        </div>
+                        <br>
+                        <div class = "form-group">
+                            <select class = "form-control" required name = "Premium Tech Support" style="width:250px;">
+                                <option value = "" selected> Premium Tech Support? </option>
+                                <option> Yes </option>
+                                <option> No </option>
+                            </select>
+                        </div>
+                        <br> 
+                        <div class = "form-group">
+                            <select class = "form-control" required name = "Unlimited Data" style="width:250px;">
+                                <option value = "" selected> Unlimited? </option>
+                                <option> Yes </option>
+                                <option> No </option>
+                            </select>
+                        </div>
+                        <br> 
+                    
+
+                    </div>
+                    <br> 
+            
+                 <input type = "submit" name = "" value = "Predict!">
+                </form>
+    </div>
+{% endblock content %}

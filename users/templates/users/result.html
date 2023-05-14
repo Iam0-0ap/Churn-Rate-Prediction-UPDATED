@@ -1,0 +1,22 @@
+{% extends 'users/base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1> Prediction Result:</h1> 
+
+    {% if predicted_class == 0 %}
+        <h2> The customer is <b> unlikely </b> to churn.</h2>
+    {% else %}
+        <h2> The customer is <b> likely </b> to churn!!</h2>
+        <br><br>
+        <h1 style=" color: red;">Churn Behaviour Detected!!!</h1>
+        <p>This is to notify the company about the behaviour of the respective customer that, the customer might want to churn. Please take 
+            necessary actions to win him/her back.
+        </p>
+        
+    {% endif %}
+    <h3> Churn probability is {{ churn_prob }}%</h3>
+</div>
+    
+
+{% endblock %}
